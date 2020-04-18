@@ -4,7 +4,7 @@
 <H4>Andrés has written some blogs</h4>
 
 {% for blog in blogs %}
-<h3>{{ blog.title }}</h3>
+<a href="{% url 'blog:detail' blog.id %}"><h3>{{ blog.title }}</h3></a>
 {{ blog.date }}<br/>
 <p>{{ blog.content }}</p>
 {% endfor %}
