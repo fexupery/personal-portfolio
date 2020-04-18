@@ -6,5 +6,5 @@
 {% for blog in blogs %}
 <a href="{% url 'blog:detail' blog.id %}"><h3>{{ blog.title }}</h3></a>
 {{ blog.date|date:'M d Y'|upper }}<br/>
-<p>{{ blog.content }}</p>
+<p>{{ blog.content|truncatechars:100 }}</p>
 {% endfor %}
