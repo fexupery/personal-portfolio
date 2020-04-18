@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 <H1>Blog</H1>
-<H4>Andrés has written some blogs</h4>
+<H4>Andrés has written {{ blogs_count }} blog{{ blogs.count|pluralize}}</h4>
 
 {% for blog in blogs %}
 <a href="{% url 'blog:detail' blog.id %}"><h3>{{ blog.title }}</h3></a>
